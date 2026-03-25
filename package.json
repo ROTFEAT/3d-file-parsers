@@ -1,0 +1,117 @@
+{
+  "name": "3d-file-parsers",
+  "version": "1.0.0",
+  "description": "Lightweight, zero-dependency parsers for niche 3D file formats (M3D, X3D, IrrMesh, Terragen, PTS) that major libraries don't support. Returns raw typed arrays — works with Three.js, Babylon.js, or any WebGL framework.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./m3d": {
+      "import": {
+        "types": "./dist/parsers/m3d.d.ts",
+        "default": "./dist/parsers/m3d.js"
+      },
+      "require": {
+        "types": "./dist/parsers/m3d.d.cts",
+        "default": "./dist/parsers/m3d.cjs"
+      }
+    },
+    "./x3d": {
+      "import": {
+        "types": "./dist/parsers/x3d.d.ts",
+        "default": "./dist/parsers/x3d.js"
+      },
+      "require": {
+        "types": "./dist/parsers/x3d.d.cts",
+        "default": "./dist/parsers/x3d.cjs"
+      }
+    },
+    "./irrmesh": {
+      "import": {
+        "types": "./dist/parsers/irrmesh.d.ts",
+        "default": "./dist/parsers/irrmesh.js"
+      },
+      "require": {
+        "types": "./dist/parsers/irrmesh.d.cts",
+        "default": "./dist/parsers/irrmesh.cjs"
+      }
+    },
+    "./terragen": {
+      "import": {
+        "types": "./dist/parsers/terragen.d.ts",
+        "default": "./dist/parsers/terragen.js"
+      },
+      "require": {
+        "types": "./dist/parsers/terragen.d.cts",
+        "default": "./dist/parsers/terragen.cjs"
+      }
+    },
+    "./pts": {
+      "import": {
+        "types": "./dist/parsers/pts.d.ts",
+        "default": "./dist/parsers/pts.js"
+      },
+      "require": {
+        "types": "./dist/parsers/pts.d.cts",
+        "default": "./dist/parsers/pts.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "3d",
+    "parser",
+    "m3d",
+    "x3d",
+    "irrmesh",
+    "irrlicht",
+    "terragen",
+    "pts",
+    "point-cloud",
+    "mesh",
+    "webgl",
+    "threejs",
+    "babylonjs",
+    "file-format",
+    "3d-converter",
+    "typed-array",
+    "browser",
+    "wasm"
+  ],
+  "author": "FabRapid <dev@fabrapid.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ROTFEAT/3d-file-parsers.git"
+  },
+  "homepage": "https://3d-tools.fabrapid.com",
+  "bugs": {
+    "url": "https://github.com/ROTFEAT/3d-file-parsers/issues"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0"
+  }
+}
